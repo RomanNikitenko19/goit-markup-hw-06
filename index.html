@@ -288,11 +288,11 @@
           </div>
     
           <div class="third-container-footer">
-            <p>Подпишитесь на рассылку</p>
+            <p class="text">Подпишитесь на рассылку</p>
             <form class="footer-contact-form" method="post">
               <label class="footer-contact-form-label">
-                <input class="contact-form-input" type="email" name="use-email" placeholder="E-mail" /></label>
-              <button class="button tooter-contact-form-bt" type="submit">Подписаться<svg class="footer-icon-bt"><use href="./images/sprite.svg#icon-icon-send"></use></svg></button>
+              <input class="contact-form-input" type="email" name="use-email" placeholder="E-mail" required /></label>
+              <button class="button footer-contact-form-bt" type="submit">Подписаться<svg class="footer-icon-bt"><use href="./images/sprite.svg#icon-icon-send"></use></svg></button>
             </form>
           </div>
 
@@ -303,32 +303,31 @@
       <div class="form-wrapper">
         <button class="form-wrapper-close-btn" type=batton data-modal-close>
           <svg class="form-wrapper-btn-icon" width="11" height="11">
-            <use href="./images/sprite.svg#" ></use>
+            <use href="./images/sprite.svg#icon-Vector" ></use>
           </svg>
         </button>
         <h2 class="title">Оставьте свои данные, мы вам перезвоним</h2>
 
-        <form class="contact-form">
+        <form class="contact-form" action="#">
           <div>
             <label class="form-label label">Имя<span class="input-box"></span>
-              <input class="contact-form-input" type="text"name="use-name"></label></div>
+            <input class="contact-form-input" type="text"name="use-name" required></label></div>
 
           <div>
             <Label class="form-label label">Телефон<span class="input-box"></span>
-            <input class="contact-form-input" type="tel" name="use-phone"></Label></div>
+            <input class="contact-form-input" type="tel" name="use-phone" required></Label></div>
 
           <div>
             <label class="form-label label">Почта<span class="input-box"></span>
-              <input class="contact-form-input" type="email" name="use-message"></label></div>
-          <div>
-          <label class="form-label">Комментарий
-          <textarea class="contact-form-textarea" placeholder="Введите текст"></textarea></label></div>
+            <input class="contact-form-input" type="email" name="use-email"required></label></div>
+          
+          <div>           
+            <label class="form-label">Комментарий
+            <textarea class="contact-form-textarea"name="use-message" placeholder="Введите текст"></textarea></label></div>
 
           <div>
-            <input class="contact-form-check-policy" type="checkbox" name="policy" id="policy" value="accept-policy">
-
-          <label class="modal-form-check-label label" for="policy">
-           <input class="contact-form-check-policy check-box" type="checkbox" name="policy" id="policy" value="accept-policy"><span class="check-box"></span>Соглашаюсь с рассылкой и принимаю <a href="" target="_blank">Условия договора</a></label></div>
+            <label class="modal-form-check-label label" for="policy">
+            <input class="contact-form-check-policy check-box" type="checkbox" name="policy" id="policy" value="accept-policy"><span class="check-box"></span>Соглашаюсь с рассылкой и принимаю <a href="" target="_blank">Условия договора</a></label></div>
           
           <button class="button" type="submit" class="contact-forn-btn">Отправить</button>
         </form>
