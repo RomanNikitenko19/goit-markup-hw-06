@@ -309,25 +309,29 @@
         <h2 class="title">Оставьте свои данные, мы вам перезвоним</h2>
 
         <form class="contact-form" action="#">
-          <div>
-            <label class="form-label label">Имя<span class="input-box"></span>
-            <input class="contact-form-input" type="text"name="use-name" required></label></div>
+          <div class="contact-form-field">
+            <label class="contact-form-label label" for="use-name">Имя
+              <svg class="person-black input-boxi"><use href="./images/sprite.svg#icon-person-black"></use></svg></div></label>
+            <input class="contact-form-input" type="text"name="use-name" id="use-name" required placeholder=" ">
 
-          <div>
-            <Label class="form-label label">Телефон<span class="input-box"></span>
-            <input class="contact-form-input" type="tel" name="use-phone" required></Label></div>
+          <div class="contact-form-field">
+            <Label class="form-label label" for="use-phone">Телефон
+              <svg class="email-black input-boxi"><use href="./images/sprite.svg#icon-phone-black"></use></svg></Label>
+            <input class="contact-form-input" type="tel" name="use-phone" id="use-phone" required placeholder=" "></div>
 
-          <div>
-            <label class="form-label label">Почта<span class="input-box"></span>
-            <input class="contact-form-input" type="email" name="use-email"required></label></div>
-          
+          <div class="contact-form-field">
+            <label class="contact-form-label label" for="use-email">Почта
+              <svg class="email-black input-boxi"><use href="./images/sprite.svg#icon-email-black"></use></svg></label>
+            <input class="contact-form-input" type="email" name="use-email" id="use-email" required placeholder=" "></div>
+            
           <div>           
-            <label class="form-label">Комментарий
-            <textarea class="contact-form-textarea"name="use-message" placeholder="Введите текст"></textarea></label></div>
+            <label class="contact-form-label" for="use-message">Комментарий</label>
+            <textarea class="contact-form-textarea"name="use-message" id="use-message" placeholder="Введите текст"></textarea></div>
 
-          <div>
+          <div class="box-policy">
             <label class="modal-form-check-label label" for="policy">
-            <input class="contact-form-check-policy check-box" type="checkbox" name="policy" id="policy" value="accept-policy"><span class="check-box"></span>Соглашаюсь с рассылкой и принимаю <a href="" target="_blank">Условия договора</a></label></div>
+            <input class="contact-form-check-policy check-box" type="checkbox" name="policy" id="policy" value="accept-policy">
+            <span class=".check-box "></span>Соглашаюсь с рассылкой и принимаю <a href="" target="_blank">Условия договора</a></label></div>
           
           <button class="button" type="submit" class="contact-forn-btn">Отправить</button>
         </form>

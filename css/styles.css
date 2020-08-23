@@ -44,6 +44,7 @@
   --border-contact-form-input: rgba(33, 33, 33, 0.2);
   --footer-contact-form-shadow:  rgba(0, 0, 0, 0.15);
   --tooter-contact-form-input-border: rgba(255, 255, 255, 0.3);
+  --contact-form-textarea: color: rgba(117, 117, 117, 0.5);
 }
 
 html {
@@ -161,7 +162,7 @@ svg {
 }
 
 .form-wrapper .title {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -172,7 +173,7 @@ svg {
 }
 
 label {
-font-family: Roboto;
+font-family: Roboto, sans-serif;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
@@ -181,6 +182,51 @@ letter-spacing: 0.01em;
 
 color: var(--primaty-text-color);
 }
+
+.contact-form-field{
+  position: relative;
+}
+
+.input-boxi {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 46%;
+  left: 10%;
+  transform: translateX(-180%);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--primary-background-color);
+}
+
+.contact-form-field .person-black:focus,
+.contact-form-field .person-black:hover{
+  fill: var(--backdrop-icon-color);
+}
+
+.contact-form-field .phone-black:focus
+.contact-form-field .phone-black:hover {
+  fill: var(--backdrop-icon-color);
+}
+
+.contact-form-field .email-black:focus
+.contact-form-field .email-black:hover {
+  fill: var(--backdrop-icon-color);
+}
+
+.contact-form-field .person-black:hover,
+.contact-form-field .person-black:focus,
+.contact-form-field .phone-black:hover,
+.contact-form-field .phone-black:focus,
+.contact-form-field .email-black:hover,
+.contact-form-field .email-black:focus {
+  fill: var(--secondary-link-color);
+}
+
+.contact-form-input:not(:placeholder-shown) + .contact-form-label .input-box:hover,
+.contact-form-input:not(:placeholder-shown) + .contact-form-label .input-box:focus {
+   fill: var(--secondary-link-color);
+}
+
 
 .contact-form-check-policy {
   /* position: absolute;
@@ -193,29 +239,32 @@ color: var(--primaty-text-color);
   overflow: hidden;  */
 
   appearance: none;
-  }
+ }
+ .box-policy {
+   position: relative;
+ }
 
-/* .input-box {
+ .check-box {
   position: absolute;
-  width: 1em;
-  height: 1em;
-  background-color: tomato;
-} */
+  width: 16px;
+  height: 16px;
+  top: 0%;
+  left: 2%;
+  /* outline: none; */
+  transform: translateY(-50%);
+  background-color: #fff;
+ }
 
-/* .label::before {
-  display: block;
-  contain: "";
-  width: 15px;
-  height: 15px;
-  outline: 1px solid var(--bg-button-color);
-  background-color: var(--primaty-text-color);
-} */
+.check-box:checked {
+  background-image: url(../images/icon-check.svg);;
+}
+
 
 .modal-form-check-label {
   display: flex;
   margin-left: 41px;
 
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -235,7 +284,7 @@ color: var(--primaty-text-color);
 }
 
 .contact-form-input {
-  width: 448px;
+  width: 100%;
   height: 40px;
 
   border: 1px solid var(--border-contact-form-input);
@@ -250,31 +299,47 @@ color: var(--primaty-text-color);
   padding-left: 42px;
   margin-bottom: 10px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.667px;
+  letter-spacing: 0.01em;
+
 }
 
   .contact-form-textarea {
-  width: 448px;
+  width: 100%;
   height: 120px;
 
   border: 1px solid var(--border-contact-form-input);
   box-sizing: border-box;
   border-radius: 4px;
   background-color: transparent;
-  color: var(--primaty-text-color);
+  color: var(--contact-form-textarea);
 
   padding-top: 12px;
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   resize: none;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.667px;
+  letter-spacing: 0.01em;
 }
 
 .contact-form-input:hover,
 .contact-form-input:focus,
 .contact-form-textarea:hover,
 .contact-form-textarea:focus {
+  outline: none;
   border: 1px solid var(--secondary-link-color);
 }
 
@@ -856,7 +921,7 @@ nav .list {
 }
 
 .gallery-work-text-container p {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -965,7 +1030,7 @@ nav .list {
 } 
 
 /* .contact-form-input::placeholder {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -1009,7 +1074,7 @@ nav .list {
   padding-left: 28px;
   border-radius: 4px;
 
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
